@@ -6,10 +6,6 @@ default.conf or alsa.conf inside /etc/modprobe.d/:
 
     options snd_hda_intel index=1
 
-Packages
---------
-packages.txt
-
 Theme
 -----
 https://github.com/grassmunk/Chicago95
