@@ -1,0 +1,20 @@
+void linux rice
+
+Audio
+-----
+default.conf or alsa.conf inside /etc/modprobe.d/:
+
+    options snd_hda_intel index=1
+
+Packages
+--------
+packages.txt
+
+Theme
+-----
+https://github.com/grassmunk/Chicago95
+
+Fonts
+-----
+System:   Roboto Mono
+Terminal: JetBrains Mono
