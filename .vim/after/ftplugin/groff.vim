@@ -2,6 +2,7 @@ iabbrev bbd \*[BD]\*[PREV]<Esc>7hi
 iabbrev iit \*[IT]\*[PREV]<Esc>7hi
 iabbrev bdi \*[BDI]\*[PREV]<Esc>7hi
 iabbrev sup \*[SUP]\*[SUPX]<Esc>7hi
+iabbrev rrd \*[red]\*[black]<Esc>8hi
 iabbrev h1 .HEADING 1 ""<Esc>i
 iabbrev h2 .HEADING 2 ""<Esc>i
 iabbrev h3 .HEADING 3 ""<Esc>i
