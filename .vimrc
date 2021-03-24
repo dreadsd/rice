@@ -34,7 +34,7 @@ colorscheme ron
 " remove trailing whitespaces and newlines
 augroup removetrailing
         autocmd!
-        autocmd BufWritePre * execute "normal ma" | %s/\s\+$//e | %s/\n\+\%$//e | execute "normal 'a"
+        autocmd BufWritePre * execute "normal ma" | %s/\s\+$//e | %s/\n\+\%$//e | execute "normal `a"
 augroup END
 
 " fast escape

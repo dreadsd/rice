@@ -7,14 +7,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_green1[]       = "#cdffcd";
-static const char col_green2[]       = "#9aa69a";
-static const char col_green3[]       = "#5c6f5c";
+static const char col_green1[]       = "#6dff33";
+static const char col_green2[]       = "#91ff66";
 static const char col_black[]        = "#000000";
 static const char *colors[][3]      = {
 	/*               fg          bg         border   */
 	[SchemeNorm] = { col_green2, col_black, col_black  },
-	[SchemeSel]  = { col_green1, col_black, col_green3 },
+	[SchemeSel]  = { col_green1, col_black, col_green2 },
 };
 
 static const char *const autostart[] = {
@@ -78,7 +77,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_green2, "-sb", col_green1, "-sf", col_black, "-nhb", col_black, "-nhf", "#db93c1", "-shb", col_green1, "-shf", "#90658a", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_green2, "-sb", col_green1, "-sf", col_black, "-nhb", col_black, "-nhf", "#00ff00", "-shb", col_green1, "-shf", "#000000", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 #include <X11/XF86keysym.h>
