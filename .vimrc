@@ -16,6 +16,7 @@ noremap <C-f> :Goyo<CR>
 
 " options
 set scrolloff=999
+set sidescrolloff=999
 set nowrapscan
 set nowrap
 set laststatus=2

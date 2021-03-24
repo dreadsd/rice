@@ -47,9 +47,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor*/
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "feh",      NULL,       NULL,       1 << 1,       0,           -1 },
-
+	{ "st-256color", NULL,     NULL,      1,            0,           -1 },
+	{ "Chromium", NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "feh",      NULL,       NULL,       1 << 3,       0,           -1 },
+	{ NULL,       "libreoffice", NULL,    1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
@@ -67,8 +69,8 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask,           KEY,      view,           {.ui = 1 << TAG} }, \
+	{ MODKEY,                       KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
