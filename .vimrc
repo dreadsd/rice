@@ -15,20 +15,23 @@ let &t_EI .= "\e[2 q" " normal mode (else)
 noremap <C-f> :Goyo<CR>
 
 " options
-set scrolloff=999
-set sidescrolloff=999
-set nowrapscan
-set nowrap
+set scrolloff=999 sidescrolloff=999
+set nowrapscan nowrap
 set laststatus=2
 set number relativenumber
+set title
+set wildmenu wildignorecase
 
 " highlight colors
-augroup crystalcolors
+augroup customColors
         autocmd!
         autocmd ColorScheme * highlight StatusLine cterm=bold
                           \ | highlight StatusLineNC cterm=NONE
                           \ | highlight ErrorMsg ctermbg=4
                           \ | highlight VertSplit ctermbg=0 ctermfg=0
+                          \ | highlight TabLine cterm=NONE ctermbg=NONE
+                          \ | highlight TabLineFill cterm=NONE
+                          \ | highlight WildMenu cterm=bold ctermfg=3 ctermbg=NONE
 augroup END
 colorscheme ron
 
