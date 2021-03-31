@@ -3,7 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -17,8 +17,9 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
+	"sh", "-c", "convert -size 1366x768 xc:#000000 /tmp/background.png && feh --no-fehbg --bg-fill /tmp/background.png", NULL,
 	"picom", "-b", NULL,
-	"sh", "-c", "xsetroot -name $(uname -o)", "NULL",
+	"sh", "-c", "xsetroot -name $(uname -o)", NULL,
 	NULL /* terminate */
 };
 

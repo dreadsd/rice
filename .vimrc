@@ -2,14 +2,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'ap/vim-css-color'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'alvan/vim-closetag'
 call plug#end()
-
-" cursor customization
-let &t_SI .= "\e[6 q" " insert mode
-let &t_SR .= "\e[4 q" " replace mode
-let &t_EI .= "\e[2 q" " normal mode (else)
 
 " mappings
 noremap <C-f> :Goyo<CR>
