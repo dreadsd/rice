@@ -1,0 +1,24 @@
+# Template file for 'slmenu'
+pkgname=slmenu
+version=0.1
+revision=1
+# _git_commit=7e74fa5db73e
+# wrksrc="rafaelgg-${pkgname}-${_git_commit}"
+wrksrc="slmenu-main"
+build_style=gnu-makefile
+short_desc="Dmenu clone for the console"
+maintainer="Benjamín Albiñana <benalb@gmail.com>"
+license="MIT"
+homepage="https://bitbucket.org/rafaelgg/slmenu/"
+# distfiles="https://bitbucket.org/rafaelgg/${pkgname}/get/${_git_commit}.tar.gz"
+distfiles="https://github.com/dreadsd/slmenu/archive/refs/heads/main.zip"
+# checksum=55725f239178ccd304f9e2c10245247fafcc9e206954be8883bf1326cbdb2d86
+checksum=ad31477758a3165e1900b165dad0c4eb829545b4e2c09506848a06e522db8a58
+
+pre_build() {
+	sed -i 's|/local||' config.mk
+}
+
+post_install() {
+	vlicense LICENSE
+}
