@@ -17,17 +17,7 @@ set title
 set wildmenu wildignorecase
 
 " highlight colors
-augroup customColors
-        autocmd!
-        autocmd ColorScheme * highlight StatusLine cterm=bold
-                          \ | highlight StatusLineNC cterm=NONE
-                          \ | highlight ErrorMsg ctermbg=4
-                          \ | highlight VertSplit ctermbg=0 ctermfg=0
-                          \ | highlight TabLine cterm=NONE ctermbg=NONE
-                          \ | highlight TabLineFill cterm=NONE
-                          \ | highlight WildMenu cterm=bold ctermfg=3 ctermbg=NONE
-augroup END
-colorscheme ron
+colorscheme eva
 
 " remove trailing whitespaces and newlines
 augroup removetrailing
