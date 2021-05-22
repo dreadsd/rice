@@ -18,6 +18,7 @@ hi Identifier   ctermfg=4 cterm=bold
 hi Statement    ctermfg=5 cterm=bold
 hi PreProc      ctermfg=6 cterm=bold
 hi Type         ctermfg=2 cterm=bold
+hi StorageClass ctermfg=5 cterm=bold
 hi StatusLine   ctermbg=0 cterm=bold
 hi StatusLineNC ctermbg=0 cterm=NONE
 hi ErrorMsg     ctermbg=4

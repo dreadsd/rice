@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'ap/vim-css-color'
 Plug 'alvan/vim-closetag'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 " mappings
@@ -37,5 +38,5 @@ augroup END
 augroup groffmom
         autocmd!
         autocmd BufRead,BufNewFile *.mom set filetype=groff
-        autocmd BufWritePost *.mom !(preconv "%" | pdfmom) >"%:r.pdf"
+        autocmd BufWritePost *.mom !(preconv "%" | tbl | pdfmom) >"%:r.pdf"
 augroup END
