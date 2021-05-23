@@ -12,29 +12,29 @@
  */
 
 enum {
-	GREEN,
-	PURPLE,
+	BLUE,
+	MAGENTA,
 };
 
 static Color colors[] = {
-	[GREEN]   = { .fg = COLOR_GREEN, .bg = -1, .fg256 = 82, .bg256 = -1, },
-	[PURPLE]    = { .fg = COLOR_BLUE,  .bg = -1, .fg256 = 98, .bg256 = -1 },
+	[BLUE] = { .fg = COLOR_BLUE, .bg = -1, },
+	[MAGENTA] = { .fg = COLOR_MAGENTA, .bg = -1, },
 };
 
 #define COLOR(c)        COLOR_PAIR(colors[c].pair)
 /* curses attributes for the currently focused window */
-#define SELECTED_ATTR   (COLOR(PURPLE) | A_BOLD)
+#define SELECTED_ATTR   (COLOR(MAGENTA) | A_BOLD)
 /* curses attributes for normal (not selected) windows */
-#define NORMAL_ATTR     (COLOR(GREEN) | A_BOLD)
+#define NORMAL_ATTR     (COLOR(BLUE) | A_BOLD)
 /* curses attributes for a window with pending urgent flag */
 #define URGENT_ATTR     NORMAL_ATTR
 /* curses attributes for the status bar */
-#define BAR_ATTR        (COLOR(PURPLE) | A_BOLD)
+#define BAR_ATTR        (COLOR(MAGENTA) | A_BOLD)
 /* characters for beginning and end of status bar message */
 #define BAR_BEGIN       '['
 #define BAR_END         ']'
 /* status bar (command line option -s) position */
-#define BAR_POS         BAR_TOP /* BAR_BOTTOM, BAR_OFF */
+#define BAR_POS         BAR_BOTTOM /* BAR_BOTTOM, BAR_OFF */
 /* whether status bar should be hidden if only one client exists */
 #define BAR_AUTOHIDE    false
 /* master width factor [0.1 .. 0.9] */
@@ -46,13 +46,13 @@ static Color colors[] = {
 /* printf format string for the tag in the status bar */
 #define TAG_SYMBOL   "[%s]"
 /* curses attributes for the currently selected tags */
-#define TAG_SEL      (COLOR(PURPLE) | A_BOLD)
+#define TAG_SEL      (COLOR(MAGENTA) | A_BOLD)
 /* curses attributes for not selected tags which contain no windows */
-#define TAG_NORMAL   (COLOR(GREEN) | A_BOLD)
+#define TAG_NORMAL   (COLOR(BLUE) | A_BOLD)
 /* curses attributes for not selected tags which contain windows */
-#define TAG_OCCUPIED (COLOR(PURPLE) | A_BOLD)
+#define TAG_OCCUPIED (COLOR(MAGENTA) | A_BOLD)
 /* curses attributes for not selected tags which with urgent windows */
-#define TAG_URGENT (COLOR(PURPLE) | A_BOLD | A_BLINK)
+#define TAG_URGENT (COLOR(MAGENTA) | A_BOLD | A_BLINK)
 
 const char tags[][8] = { "1", "2", "3", "4", "5" };
 
@@ -140,7 +140,7 @@ static KeyBinding bindings[] = {
 };
 
 static const ColorRule colorrules[] = {
-	{ "", A_NORMAL, &colors[GREEN] }, /* default */
+	{ "", A_NORMAL, &colors[BLUE] }, /* default */
 };
 
 /* possible values for the mouse buttons are listed below:
