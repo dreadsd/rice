@@ -1,0 +1,22 @@
+body::-webkit-scrollbar {
+  display: none;
+}
+
+span[vimbhint^='label'] {
+  color: #ffff55 !important;
+  font: bold 8pt monospace !important;
+  opacity: 0.7 !important;
+  text-transform: uppercase !important;
+  background: #202020 !important;
+  border-radius: 5px;
+  padding: 0 0.2rem !important;
+  border: none !important;
+}
+span[vimbhint='label focus'] {
+  font: bold 11pt monospace !important;
+  opacity: 1 !important;
+}
+*[vimbhint^='hint'] {
+  background-color: #ffffcc !important;
+  color: #202020 !important;
+}

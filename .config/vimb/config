@@ -1,0 +1,18 @@
+set input-css=background-color:#202020;color:#fff;font:9pt monospace
+set input-error-css=background-color:#202020;color:#f77;font:bold 9pt monospace
+set status-css=color:#fff;background-color:#000;font:bold 9pt monospace
+set status-ssl-css=background-color:#cf6fcf;color:#000;font:bold 9pt monospace
+set status-ssl-invalid-css=background-color:#cf6f6f;color:#000;font:bold 9pt monospace
+set completion-css=color:#fff;background-color:#202020;font:9pt monospace
+set completion-hover-css=color:#202020;background-color:#9fff9f
+set completion-selected-css=color:#202020;background-color:#6fcf6f
+
+set dark-mode=true
+set default-zoom=90
+set hint-keys=asdfghjkl
+set hint-keys-same-length=true
+set hint-timeout=0
+set input-autohide=true
+set prevent-newwindow=true
+set scroll-step=100
+set smooth-scrolling=true
